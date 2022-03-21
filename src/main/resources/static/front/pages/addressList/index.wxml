@@ -1,0 +1,24 @@
+<!--pages/addressList/index.js.wxml-->
+<view>
+  <view class="row">
+    <view>省/直辖市：</view>
+    <view>{{province}}</view>
+  </view>
+
+  <view class="row">
+    <view>市：</view>
+    <view>{{city}}</view>
+  </view>
+
+  <view class="row">
+    <view>区：</view>
+    <view>{{district}}</view>
+  </view>
+
+  <view class="row">
+    <view>详细地址:  </view>
+    <view>{{addr}}</view>
+  </view>
+
+  <button bindtap="selectAddress" type="primary">修改地址</button>
+</view>

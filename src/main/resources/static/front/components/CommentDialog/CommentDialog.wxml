@@ -1,0 +1,16 @@
+<!--components/CommentDialog.wxml-->
+<view class='wx_dialog_container' hidden="{{!isShow}}" animation="{{updatePanelAnimationData}}">
+  <view class='wx-dialog'>
+    <view class='wx-dialog-title'>{{ title }}</view>
+    <view class='wx-dialog-content'>{{ content }}</view>
+    <input value="{{comment}}" bindinput="inputComment" style="width: 100%; height: 60px; background-color:azure;"></input>
+
+    <star bind:getscore="getscore" starSize="normal" score="0" starIdx="0" style="padding: 20px;"></star>
+
+
+    <view class='wx-dialog-footer'>
+      <view class='wx-dialog-btn' catchtap='_cancelEvent' hidden='{{!isShowCancelBtn}}'>{{ cancelText }}</view>
+      <view class='wx-dialog-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
+    </view>
+  </view>
+</view>

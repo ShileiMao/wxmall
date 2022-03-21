@@ -1,0 +1,22 @@
+<!--pages/advertiserinfo.wxml-->
+
+
+<!-- 行列表开始 -->
+<view class="nx_line">
+    <view class="nx_line_list">
+      <block wx:if="{{dataList.length !== 0}}">
+        
+        <view class="nx_line_item" wx:for="{{dataList}}" wx:for-item="item" wx:key="id">
+          <navigator url="/pages/advertiserdetails/advertiserdetails?id={{item.id}}">
+            <view>标题：{{item.name}}</view>
+          </navigator>
+        </view>
+      </block>
+      <block wx:else>
+        <image mode="widthFix" src="/imgs/no_message.png" ></image>
+      </block>
+    </view>
+  </view>
+  <!-- 行列表结束 -->
+
+

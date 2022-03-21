@@ -1,0 +1,29 @@
+<view class="nx_line">
+    <view class="nx_line_title">我的团购商品</view>
+    <view class="nx_line_list">
+        <view class="nx_line_item" wx:for="{{goodsList}}" wx:for-item="item" wx:key="id">
+            <navigator style="flex:1" url="/pages/goodsInfo/index?id={{item.goodsId}}">
+                <image style="height: 150rpx" mode="scaleToFill" src="{{item.url}}"></image>
+            </navigator>
+            <view style="flex:2; padding: 0 30rpx; position: relative">
+                <view style="font-weight: bold; font-size: 34rpx">{{item.goodsName}}</view>
+                <view style="color: red; padding-top: 10rpx">{{item.status}}</view>
+                <view style="position: absolute; bottom: 10rpx">
+                    <text style="color:red">￥{{item.price}}</text>
+                    <text style="margin: 0 30rpx">1件</text>
+
+                    <button class="btn" style="background: red; color: white; display: inline" 
+                        bindtap="del" data-goodsId="{{item.goodsId}}">删除</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 底部工具栏 -->
+  <view style="position: fixed; bottom: 0; width: 100%">
+    <!-- 提交订单 -->
+    <view style="width: 100%; padding: 30rpx 0; font-size: 34rpx; text-align:center;background: red; color: white" bindtap="handlePostOrder">
+      提交订单
+    </view>
+  </view>

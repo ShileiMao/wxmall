@@ -1,0 +1,8 @@
+/* pages/addressList/index.js.wxss */
+.row {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-content: center; 
+  align-items: center;
+}

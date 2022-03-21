@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "commentDialog": "/components/CommentDialog/CommentDialog"
+  },
+  "navigationBarTitleText":"商品详情"
+}

@@ -1,0 +1,10 @@
+<!--pages/advertiserdetails/advertiserdetails.wxml-->
+
+<view class="nx_line">
+  <view class="nx_line_list">
+    <view class="nx_line_item">
+      <rich-text nodes="{{advertContent}}" style="overflow: scroll;">
+      </rich-text>
+    </view>
+  </view>
+</view>
